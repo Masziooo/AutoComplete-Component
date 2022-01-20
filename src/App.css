@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  body {
+    font-family: sans-serif;
+    height: 100vh;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+	input {
+		flex: 1;
+		border: none;
+		min-height: 46px;
+		font-size: 14px;
+		padding: 4px 0 0 0;
+    outline: transparent;
   }
-  to {
-    transform: rotate(360deg);
+
+  input:focus::placeholder {
+    color: rgb(44, 44, 44);
   }
-}
+  
+  h1 {
+    font-weight: normal;
+    font-size: 48px;
+  }
+
+  .component-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }    
+
+  .header {
+    background-color: rgb(189, 189, 189);
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100vw;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 500px;
+    padding: 0 8px;
+    border: 1px solid #999;
+    
+  }
+
+  .no-suggestions {
+    color: #999;
+    padding-top: 0.5rem;
+    max-width: 500px;
+  }
+
+  .suggestions {
+    border: 1px solid #999;
+    border-top-width: 0;
+    list-style: none;
+    margin-top: 0;
+    overflow-y: auto;
+    padding-left: 0;
+    width: calc(500px + 1rem);
+  }
+
+  .suggestions li {
+    padding: 0.5rem;
+  }
+
+  .suggestion-active,
+  .suggestions li:hover {
+    background-color: #C70039;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .suggestions li:not(:last-of-type) {
+    border-bottom: 1px solid #999;
+  }
+
+  .tag {
+    width: auto;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 8px;
+    font-size: 14px;
+    list-style: none;
+    border-radius: 6px;
+    margin: 0 8px 8px 0;
+    background: #C70039;
+  }
+
+  .tag-text {
+      margin-top: 3px;
+      font-weight: 700;
+  }
+
+  .tag-close {
+    display: block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 8px;
+    color: #C70039;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .tag-close:hover {
+    background: black;
+  }
+  
+  #tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 8px 0 0 0;
+  }

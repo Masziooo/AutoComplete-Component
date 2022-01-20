@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import AutoCompleteComponent from './Components/AutoComplete';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="wrapper">
+      <header className="header">
+        <h1>UI Component for Autocomplete</h1>
       </header>
+      <AutoCompleteComponent
+        suggestions={[
+          "JavaScript",
+          "Java",
+          "Node",
+          "React",
+          "Angular",
+          "Python",
+          "Ruby",
+          "HTML",
+          "CSS",
+          "C++",
+          "C#",
+          "PHP",
+          "Vuejs",
+          "Jest",
+          "Nextjs",
+          "Gatsby",
+          "NPM",
+          "Yarn",
+          "Redux"
+          
+
+        ]}
+      />
     </div>
   );
 }
