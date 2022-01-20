@@ -2,6 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import App from './App';
 import AutoCompleteComponent from './Components/AutoComplete';
+import { unmountComponentAtNode } from "react-dom";
+
 
 let container = null;
 beforeEach(() => {
@@ -17,7 +19,6 @@ afterEach(() => {
 
 test('AutoComplete Component Test', () => {
   act(() => {
-    render(<AutoComplete />);  
+    render(<AutoCompleteComponent />, container);  
   });
-  
 });
